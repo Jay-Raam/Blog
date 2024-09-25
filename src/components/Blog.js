@@ -23,6 +23,8 @@ const BlogPosts = (props) => {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
+        console.log(data.items);
+        console.log(data.items.length);
         setPosts(data.items);
         setImagesLoaded(true);
       } catch (error) {
